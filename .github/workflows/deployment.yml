@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Awaiting approval
-        uses: peter-evans/wait-for-approval@v2
+        uses: trstringer/manual-approval@v1
         with:
           approvers: sboll
           timeout-minutes: 60
