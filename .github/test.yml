@@ -1,0 +1,9 @@
+name: Test Project
+on: psuh
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get Code
+        run: echo "Getting code..."
+        
