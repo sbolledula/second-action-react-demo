@@ -1,4 +1,4 @@
-name: repository-deployment workflow - ${{ github.repository }}
+name: repository-deployment workflow
 on: push
 jobs:
   test:
