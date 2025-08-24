@@ -5,5 +5,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Get Code
-        run: echo "Getting code..."
+        uses: actions/checkout@v3
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      - name: Install Depedencies
+        run: npm ci
+      - name: Run Tests
+        run: npm test -- --watchAll=false
         
