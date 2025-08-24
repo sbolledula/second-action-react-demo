@@ -1,4 +1,4 @@
-name: Test Project
+name: repository-deployment workflow 
 on: push
 jobs:
   test:
@@ -28,5 +28,7 @@ jobs:
         run: npm ci
       - name: Build Project
         run: npm run build
+      - name: Get repo name only
+        run: echo "REPO_NAME=${{ github.repository }}" | awk -F'/' '{print $2}'
       - name: Deploy to GitHub
-        run: echo "Deploying to GitHub..." 
+        run: echo "Deploying to GitHub..."
