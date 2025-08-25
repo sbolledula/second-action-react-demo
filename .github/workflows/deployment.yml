@@ -4,12 +4,8 @@ jobs:
   approval:
     name: Wait for approval
     runs-on: ubuntu-latest
-    steps:
-      - name: Awaiting approval
-        uses: trstringer/manual-approval@v1
-        with:
-          approvers: sboll
-          timeout-minutes: 60
+    environment:
+      name: sridhar_dev
   test:
     name: Test job for ${{ github.repository }}
     runs-on: ubuntu-latest
