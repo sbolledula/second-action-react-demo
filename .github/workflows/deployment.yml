@@ -4,8 +4,10 @@ jobs:
   approval:
     name: Wait for approval
     runs-on: ubuntu-latest
-    environment:
-      name: sridhar_dev
+    environment: sridhar_dev
+    steps:
+      - name: Awaiting approval
+        run: echo "Waiting for approval..."
   test:
     name: Test job for ${{ github.repository }}
     runs-on: ubuntu-latest
